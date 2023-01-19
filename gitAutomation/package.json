@@ -2,14 +2,19 @@
   "name": "gitautomation",
   "version": "1.0.0",
   "description": "",
-  "main": "gitApp.js",
+  "main": "gitApp.ts",
   "scripts": {
-    "start": "node gitApp.js"
+    "start": "tsc",
+    "start-node": "node gitApp.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "simple-git": "^3.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
   }
 }
