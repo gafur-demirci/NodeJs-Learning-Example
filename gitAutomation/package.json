@@ -1,0 +1,15 @@
+{
+  "name": "gitautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gitApp.js",
+  "scripts": {
+    "start": "node gitApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "simple-git": "^3.16.0"
+  }
+}
