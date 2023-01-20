@@ -5,7 +5,7 @@
   "main": "gitApp.ts",
   "scripts": {
     "start": "tsc && node gitApp.js",
-    "start-node": "node gitApp.js"
+    "start-pull": "tsc gitPullTest.ts && node gitPullTest.js"
   },
   "keywords": [],
   "author": "",
