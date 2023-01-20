@@ -1,6 +1,6 @@
 import * as fs from "fs";
 // import * as path from "path";
-import { SimpleGit, simpleGit } from "simple-git";
+import { PullResult, SimpleGit, simpleGit } from "simple-git";
 import * as shell from "shelljs";
 //cimport * as fs-extra from "fs-extra";
 
@@ -43,19 +43,19 @@ const files = async () => {
                                 baseURI = "https://github.com/STechQ/" + file + ".git";
                                 branch = "main";
                         }
-
-                        const pullResponse = await git.pull(
+                        let gitWithFolder : SimpleGit = simpleGit("C:\\Users\\201054\\Desktop\\repos\\" + file);
+                        const pullResponse : PullResult = await gitWithFolder.pull(
                             {
                                 remote: "origin",
                                 branch: branch,
                             },
                             (err, data) => {
                                 if (!err) console.log(data);
-                                else console.log(err);
+                                else console.log("there is an error: " + err);
                             }
 
                         );
-                        console.log(pullResponse);
+                        console.log("this is pull response: " + pullResponse);
 
                     } else {
                         console.log("git dosyası yok");
