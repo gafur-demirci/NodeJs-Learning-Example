@@ -12,25 +12,38 @@ import { pullFunc } from "./gitPullTest";
 // const password: String = "********";
 
 const files = async () => {
+
     fs.readdir("C:\\Users\\201054\\Desktop\\repos", (err, files) => {
+
         if (err === null) {
 
+            // files -> klasör
+
             files.forEach(file => {
-                // console.log(file);
+
+                // file -> klasör içindeki dosya
 
                 fs.readdir("C:\\Users\\201054\\Desktop\\repos\\" + file, async (err, subFiles) => {
+
                     // console.log(file);
+
                     let inGit = subFiles.includes(".git");
+
                     let baseURI, branch;
                     // console.log(inGit);
+
                     if (inGit) {
+
                         let filePath = "C:\\Users\\201054\\Desktop\\repos\\" + file;
                         console.log(filePath);
-                        pullFunc(filePath).then( () => {
-                            console.log("then'e geldi");
-                            
+
+                        pullFunc(filePath).then(() => {
+
+                            console.log("pull triggered");
+                            console.log("---------------------------");
+
                         });
-                        
+
                         // console.log(file);
 
                         // switch (file) {
@@ -66,26 +79,72 @@ const files = async () => {
                         // console.log("this is pull response: " + pullResponse);
 
                     } else {
-                        console.log("git dosyası yok");
+
+                        fs.readdir(`C:\\Users\\201054\\Desktop\\repos\\${file}\\`, (err, files) => {
+
+                            if (err === null) {
+
+                                // files -> klasör
+
+                                // console.log("else ilk konum: " + `C:\\Users\\201054\\Desktop\\repos\\${file}\\`);
+
+                                files.forEach(fileIn => {
+
+                                    // console.log(file);
+                                    // console.log('fileIn: ' + fileIn);
+
+                                    // file -> klasör içindeki dosya
+
+                                    fs.readdir(`C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn, async (err, subFiles) => {
+
+                                        // console.log("ikinci read: " + `C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn);
+                                        let inGit = subFiles?.includes(".git");
+
+                                        let baseURI, branch;
+                                        // console.log(inGit);
+
+                                        if (inGit) {
+
+                                            let filePath = `C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn;
+                                            console.log("file path: " + filePath);
+
+                                            pullFunc(filePath).then(() => {
+                                                
+                                                console.log("pull triggered second");
+                                                console.log("---------------------------");
+
+                                            });
+
+                                        } else {
+
+                                            //console.log('ikinci else git yok');
+
+                                        }
+                                        //console.log("---------------------------");
+
+                                    })
+                                })
+
+                            }
+                            else console.error(err);
+
+                        });
+                        //console.log("git dosyası yok");
+
 
                     }
-
-                    // subFiles.forEach(subFile => {
-                    //     console.log(subFile);
-
-                    // })
-                    console.log("---------------------------");
+                    //console.log("---------------------------");
 
                 })
             })
 
         }
-        else console.log(err);
+        else console.error(err);
 
     });
 };
 
-files().then(() => console.log("çalıştı"));
+files().then(() => console.log("async worked"));
 
 
 // const filePath = fs.existsSync(path.resolve(__dirname, 'folder name'));
