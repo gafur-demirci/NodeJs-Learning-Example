@@ -26,21 +26,18 @@ const files = async () => {
                 fs.readdir("C:\\Users\\201054\\Desktop\\repos\\" + file, async (err, subFiles) => {
 
                     // console.log(file);
-
                     let inGit = subFiles.includes(".git");
-
-                    let baseURI, branch;
                     // console.log(inGit);
 
                     if (inGit) {
 
                         let filePath = "C:\\Users\\201054\\Desktop\\repos\\" + file;
-                        console.log(filePath);
+                        //console.log(filePath);
 
                         pullFunc(filePath).then(() => {
 
-                            console.log("pull triggered");
-                            console.log("---------------------------");
+                            //console.log("pull triggered");
+                            //console.log("---------------------------");
 
                         });
 
@@ -106,12 +103,12 @@ const files = async () => {
                                         if (inGit) {
 
                                             let filePath = `C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn;
-                                            console.log("file path: " + filePath);
+                                            //console.log("file path: " + filePath);
 
                                             pullFunc(filePath).then(() => {
                                                 
-                                                console.log("pull triggered second");
-                                                console.log("---------------------------");
+                                                //console.log("pull triggered second");
+                                                //console.log("---------------------------");
 
                                             });
 
