@@ -21,7 +21,7 @@ const child_process_1 = require("child_process");
 //    console.log("pwd: " +stdout);
 // })
 const pullFunc = async (file) => {
-    console.log("currrent folder is: " + file);
+    //console.log("currrent folder is: " + file);
     await (0, child_process_1.exec)(`cd ${file} && git pull`, (err, stdout, stderr) => {
         if (err) {
             console.log(err + stderr);

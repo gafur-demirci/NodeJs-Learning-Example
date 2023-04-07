@@ -22,7 +22,7 @@ import { exec } from "child_process";
 // })
 export const pullFunc = async (file: String) => {
 
-   console.log("currrent folder is: " + file);
+   //console.log("currrent folder is: " + file);
 
    await exec(`cd ${file} && git pull`, (err,stdout,stderr) => {
 
