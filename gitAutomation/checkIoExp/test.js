@@ -1,5 +1,6 @@
-const assert = require("assert");
+//const assert = require("assert");
 
+/* zero index sort
 let numArr = [5,6,0,7,10]
 let zeroIndex = []
 
@@ -16,11 +17,10 @@ if (zeroIndex.length !== 0) {
 }else{
     numArr = numArr.sort()
 }
-//return numArr;
-console.log(numArr);
-
-
-/* 
+return numArr;
+//console.log(numArr);
+ */
+/* acceptablePassword
 function isAcceptablePassword(password) {
     let s = false;
     if (password.length > 6) {
@@ -83,7 +83,7 @@ assert.strictEqual(isAcceptablePassword("aaaaaaabbaaaaaaaab"), false);
 
 console.log("Coding complete? Click 'Check Solution' to earn rewards!");
 */
-/* 
+/* isAcceptablePass
 function isAcceptablePassword(password) {
     if (password.length > 6) {
         let s = false;
