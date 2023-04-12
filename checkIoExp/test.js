@@ -1,5 +1,8 @@
 const assert = require("assert");
 
+
+
+/* All Upper I
 function isAllUpper(text) {
     let numCount = 0
     let letCount = 0
@@ -42,7 +45,7 @@ assert.strictEqual(isAllUpper("444"), true);
 assert.strictEqual(isAllUpper("55 55 5 "), true);
 
 console.log("Coding complete? Click 'Check Solution' to earn rewards!");
-
+ */
 /* zero index sort
 let numArr = [5,6,0,7,10]
 let zeroIndex = []
