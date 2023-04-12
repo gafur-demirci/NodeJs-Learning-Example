@@ -2,6 +2,25 @@ const assert = require("assert");
 
 
 
+/* betweem markers
+function betweenMarkers(text, start, end) {
+    //let startIndex = text.indexOf(`${start}`)
+    //let endIndex = text.indexOf(`${end}`)
+    //let match = text.slice(text.indexOf(`${start}`) + 1, text.indexOf(`${end}`))
+    return text.slice(text.indexOf(`${start}`) + 1, text.indexOf(`${end}`));
+}
+
+console.log("Example:");
+console.log(betweenMarkers("What is >apple<", ">", "<"));
+
+// These "asserts" are used for self-checking
+assert.strictEqual(betweenMarkers("What is >apple<", ">", "<"), "apple");
+assert.strictEqual(betweenMarkers("What is [apple]", "[", "]"), "apple");
+assert.strictEqual(betweenMarkers("What is ><", ">", "<"), "");
+assert.strictEqual(betweenMarkers("[an apple]", "[", "]"), "an apple");
+
+console.log("Coding complete? Click 'Check Solution' to earn rewards!");
+ */
 /* All Upper I
 function isAllUpper(text) {
     let numCount = 0
