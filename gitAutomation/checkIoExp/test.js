@@ -1,4 +1,47 @@
-//const assert = require("assert");
+const assert = require("assert");
+
+function isAllUpper(text) {
+    let numCount = 0
+    let letCount = 0
+    let numarr = []
+    let letarr = []
+    let upper = []
+    let lower = []
+    let s = false;
+    text = text.replace(" ", "")
+    let textL = text.length;
+    text.split("").forEach((item) => {
+        s = !isNaN(Number(item));
+        if (s) {
+            numarr.push(item)
+            numCount++;
+        }
+        else {
+            if (item === item.toUpperCase) upper.push(item)
+            else lower.push(item)
+            letarr.push(item)
+            letCount++;
+        }
+
+    });
+    if (text === "") s = true;
+    if (textL === numCount) s = true;
+    if (textL === upper.length) s = true;
+    return s;
+}
+
+console.log("Example:");
+console.log(isAllUpper("ALL UPPER"));
+
+// These "asserts" are used for self-checking
+assert.strictEqual(isAllUpper("ALL UPPER"), true);
+assert.strictEqual(isAllUpper("all lower"), false);
+assert.strictEqual(isAllUpper("mixed UPPER and lower"), false);
+assert.strictEqual(isAllUpper(""), true);
+assert.strictEqual(isAllUpper("444"), true);
+assert.strictEqual(isAllUpper("55 55 5 "), true);
+
+console.log("Coding complete? Click 'Check Solution' to earn rewards!");
 
 /* zero index sort
 let numArr = [5,6,0,7,10]
