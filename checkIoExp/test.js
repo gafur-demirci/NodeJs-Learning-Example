@@ -17,7 +17,7 @@ function isAllUpper(text) {
             numCount++;
         }
         else {
-            if (item === item.toUpperCase) upper.push(item)
+            if (item === item.toUpperCase()) upper.push(item)
             else lower.push(item)
             letarr.push(item)
             letCount++;
