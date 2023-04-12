@@ -2,6 +2,57 @@ const assert = require("assert");
 
 
 
+/* changingDirection
+function changingDirection(elements) {
+    let up = 0;
+    let down = 0;
+    let direction = "";
+    let choice = false;
+    for (let index = 0; index < elements.length; index++) {
+        const prev = elements[index - 1];
+        const next = elements[index + 1]
+        const element = elements[index]
+        if (index == 0 || choice === false) {
+            if (element < next) { direction = "up"; choice = true }
+            else if (element > next) { direction = "down"; choice = true }
+            else if (element == next) choice = false
+        } else if (index !== 0 && choice == true) {
+
+            switch (direction) {
+                case "up":
+                    if (element > next && element >= prev) { direction = "down"; down++ }
+                    else if (element >= prev && element < next) { direction = "up" }
+                    break;
+                case "down":
+                    if (element < next && element < prev) { direction = "up"; up++ }
+                    else if (element < prev && element >= next) { direction = "down" }
+                    break;
+            }
+
+            // if (element > prev && element > next) { direction = "down"; down++; }
+            // else if( element > prev && element == next) {direction = "up"}
+            // else if (element < prev && element < next) { direction = "up"; up++; }
+            // else if (element < prev && element > next) { direction = "down"}
+            //else if (element)
+            //else if (element > prev && (element < next || element == next)) {if (direction === "up") {direction = "down"; down++}}
+            //else if (element < prev && !element < next) {if (direction === "down") {direction = "up"; up++}}
+        }
+
+    }
+    //console.log(up, down);
+    return up + down;
+}
+
+// console.log("Example:");
+// console.log(changingDirection([1, 2, 3, 4, 5]));
+
+// These "asserts" are used for self-checking
+assert.strictEqual(changingDirection([1, 2, 3, 4, 5]), 0);
+assert.strictEqual(changingDirection([1, 2, 3, 2, 1]), 1);
+assert.strictEqual(changingDirection([1, 2, 2, 1, 2, 2]), 2);
+assert.strictEqual(changingDirection([6,6,6,4,1,2,5,9,7,8,5,9,4,2,6]), 7);
+console.log("Coding complete? Click 'Check Solution' to earn rewards!");
+ */
 /* betweem markers
 function betweenMarkers(text, start, end) {
     //let startIndex = text.indexOf(`${start}`)
