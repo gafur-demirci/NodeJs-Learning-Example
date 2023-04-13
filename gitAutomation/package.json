@@ -5,6 +5,8 @@
   "main": "gitApp.ts",
   "scripts": {
     "start": "tsc && node gitApp.js",
+    "start:pull": "tsc && node pullAuto.js",
+    "start:npmi": "tsc && node npmIAuto.js",
     "start-pull": "tsc gitPullTest.ts && node gitPullTest.js"
   },
   "keywords": [],
