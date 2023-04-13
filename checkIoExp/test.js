@@ -1,6 +1,6 @@
 const assert = require("assert");
 
-
+// devamı solve.ts de
 
 /* beginningZeros
 function beginningZeros(a) {
