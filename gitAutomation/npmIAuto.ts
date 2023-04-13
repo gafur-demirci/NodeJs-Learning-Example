@@ -25,7 +25,9 @@ const files = async () => {
                         npmIFunc(filePath);
 
 
-                    } else {
+                    } 
+ /*                    
+                    else {
 
                         fs.readdir(`C:\\Users\\201054\\Desktop\\repos\\${file}\\`, (err, files) => {
 
@@ -74,7 +76,7 @@ const files = async () => {
                         //console.log("git dosyası yok");
 
 
-                    }
+                    } */
                     //console.log("---------------------------");
 
                 })
