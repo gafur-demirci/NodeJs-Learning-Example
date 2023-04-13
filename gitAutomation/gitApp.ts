@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import { pullFunc } from "./gitPullTest";
+import { npmIFunc } from "./npmInstallTest";
 // import * as path from "path";
 // import { PullResult, SimpleGit, simpleGit } from "simple-git";
 // import * as shell from "shelljs";
@@ -27,6 +28,7 @@ const files = async () => {
 
                     // console.log(file);
                     let inGit = subFiles.includes(".git");
+                    let inPackage = subFiles.includes("package.json");
                     // console.log(inGit);
 
                     if (inGit) {
@@ -106,11 +108,70 @@ const files = async () => {
                                             //console.log("file path: " + filePath);
 
                                             pullFunc(filePath).then(() => {
-                                                
+
                                                 //console.log("pull triggered second");
                                                 //console.log("---------------------------");
 
                                             });
+
+                                        } else {
+
+                                            //console.log('ikinci else git yok');
+
+                                        }
+                                        //console.log("---------------------------");
+
+                                    })
+                                })
+
+                            }
+                            else console.error(err);
+
+                        });
+                        //console.log("git dosyası yok");
+
+
+                    }
+
+                    if (inPackage) {
+
+                        let filePath = "C:\\Users\\201054\\Desktop\\repos\\" + file;
+                        //console.log(filePath);
+
+                        npmIFunc(filePath);
+
+
+                    } else {
+
+                        fs.readdir(`C:\\Users\\201054\\Desktop\\repos\\${file}\\`, (err, files) => {
+
+                            if (err === null) {
+
+                                // files -> klasör
+
+                                // console.log("else ilk konum: " + `C:\\Users\\201054\\Desktop\\repos\\${file}\\`);
+
+                                files.forEach(fileIn => {
+
+                                    // console.log(file);
+                                    // console.log('fileIn: ' + fileIn);
+
+                                    // file -> klasör içindeki dosya
+
+                                    fs.readdir(`C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn, async (err, subFiles) => {
+
+                                        // console.log("ikinci read: " + `C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn);
+                                        let inPackage = subFiles?.includes("package.json");
+
+                                        let baseURI, branch;
+                                        // console.log(inGit);
+
+                                        if (inPackage) {
+
+                                            let filePath = `C:\\Users\\201054\\Desktop\\repos\\${file}\\` + fileIn;
+                                            //console.log("file path: " + filePath);
+
+                                            npmIFunc(filePath);
 
                                         } else {
 
