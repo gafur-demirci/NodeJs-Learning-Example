@@ -2,6 +2,24 @@ import assert from "assert";
 
 
 
+/* indexPower
+function indexPower(ar: number[], n: number): number {
+    let indexed = ar[n]
+    if(n >= ar.length) return -1;
+    return Math.pow(ar[n],n)
+}
+
+console.log("Example:");
+console.log(indexPower([1, 2, 3], 2));
+
+// These "asserts" are used for self-checking
+assert.strictEqual(indexPower([1, 2, 3, 4], 2), 9);
+assert.strictEqual(indexPower([1, 3, 10, 100], 3), 1000000);
+assert.strictEqual(indexPower([0, 1], 0), 1);
+assert.strictEqual(indexPower([1, 2], 3), -1);
+
+console.log("Coding complete? Click 'Check Solution' to earn rewards!");
+ */
 /* maxDigit
 function maxDigit(value: number): number {
     let first = value.toString().split('')[0]
