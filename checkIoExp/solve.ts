@@ -2,6 +2,41 @@ import assert from "assert";
 
 
 
+/* endZeros
+function endZeros(a: number): number {
+    let count = 0;
+    if (a.toString().length === 1) {
+        return count = a === 0 ? 1 : 0;
+    } else {
+        for (let index = 0; index < a.toString().split('').length; index++) {
+            const element = a.toString().split('').reverse()[index];
+            if (Number(element) === 0) count++
+            else return count
+
+        }
+        // a.toString().split('').reverse().forEach(num => {
+        //     if (Number(num) !== 0) return
+        //     else if(Number(num) === 0 ) count++
+        //     // Number(num) === 0 ? count++ : count
+        // })
+        return count;
+    }
+
+}
+
+console.log("Example:");
+console.log(endZeros(10));
+
+// These "asserts" are used for self-checking
+assert.strictEqual(endZeros(0), 1);
+assert.strictEqual(endZeros(1), 0);
+assert.strictEqual(endZeros(10), 1);
+assert.strictEqual(endZeros(101), 0);
+assert.strictEqual(endZeros(245), 0);
+assert.strictEqual(endZeros(100100), 2);
+
+console.log("Coding complete? Click 'Check Solution' to earn rewards!");
+ */
 /* indexPower
 function indexPower(ar: number[], n: number): number {
     let indexed = ar[n]
