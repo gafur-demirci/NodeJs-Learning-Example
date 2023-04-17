@@ -1,7 +1,70 @@
 import assert from "assert";
+/* isometricStrings
+function isometricStrings(line1: string, line2: string): boolean {
+        // If length of strings are not equal then
+        // they are not isomorphic
+        if (line1.length !== line2.length) {
+            return false;
+        }
+ 
+        // Map to store the mapping between
+        // characters of first string to second
+        const map = new Map();
+ 
+        // Set to store the already mapped
+        // character of second string
+        const set = new Set();
+ 
+        for (let i = 0; i < line1.length; i++) {
+ 
+            // Taking ith char from both strings
+            let char1 = line1.charAt(i);
+            let char2 = line2.charAt(i);
+ 
+            // If char1 has already been mapped
+            if (map.has(char1) == true) {
+ 
+                // Then we have to check that
+                // mapped char should be same
+                if (map.get(char1) !== char2) {
+                    return false;
+                }
+            }
+ 
+            // If char1 is appearing for the first time
+            else {
+ 
+                // Check in the set that the char2
+                // is already there or not
+                if (set.has(char2)) {
+                    return false;
+                }
+ 
+                // If none of above condition is true
+                // it means both char1 and char2 are
+                // appearing for the first time
+                // insert them into the map
+                map.set(char1, char2);
+                set.add(char2);
+            }
+        }
+        return true;
+}
 
+console.log("Example:");
+console.log(isometricStrings("add", "egg"));
 
+// These "asserts" are used for self-checking
+assert.strictEqual(isometricStrings("add", "egg"), true);
+assert.strictEqual(isometricStrings("foo", "bar"), false);
+assert.strictEqual(isometricStrings("bar", "foo"), true);
+assert.strictEqual(isometricStrings("", ""), true);
+assert.strictEqual(isometricStrings("all", "all"), true);
+assert.strictEqual(isometricStrings("gogopy", "doodle"), false);
+assert.strictEqual(isometricStrings("abba", "cccc"), true);
 
+console.log("Coding complete? Click 'Check Solution' to earn rewards!");
+ */
 /* endZeros
 function endZeros(a: number): number {
     let count = 0;
