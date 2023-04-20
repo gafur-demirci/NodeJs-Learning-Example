@@ -1,16 +1,6 @@
 import * as fs from "fs";
 import { pullFunc } from "./gitPullTest";
 import { npmIFunc } from "./npmInstallTest";
-// import * as path from "path";
-// import { PullResult, SimpleGit, simpleGit } from "simple-git";
-// import * as shell from "shelljs";
-//cimport * as fs-extra from "fs-extra";
-
-//const git : SimpleGit = simpleGit().clean(CleanOptions.FORCE);
-// const git: SimpleGit = simpleGit();
-
-// const userName: String = "*********";
-// const password: String = "********";
 
 const files = async () => {
 
@@ -203,34 +193,3 @@ const files = async () => {
 };
 
 files().then(() => console.log("async worked"));
-
-// const filePath = fs.existsSync(path.resolve(__dirname, 'folder name'));
-// console.log(`file path is ${filePath}`);
-
-
-// if (!fs.existsSync(path.resolve(__dirname, 'folder name'))) {
-
-//     await git.clone(`https://${userName}:${password}@github.com/yourepo`);
-// };
-
-// try {
-//     shell.cd('/folder where git repo is');
-//     await fse.copySync(path.resolve(__dirname, 'folder where file is present'), path.resolve(__dirname, 'git repo folder'), {
-//         overwrite: true
-//     }, (error: new () => any) => {
-//         if (error)
-//             throw new error;
-//         else
-//             throw new Error("some internal error");
-//     });
-
-//     //shell.exec(`git add --all`);
-//     //shell.exec(`git commit -m "Updated Repo"`);
-//     shell.exec(`git pull`);
-//     //shell.exec(`git pull https://${userName}:${password}@github.com/yourepo`);
-// }
-// catch (error) {
-//     console.log("Error while pushing files to git repo, the error is ", error);
-// }
-
-// console.log("hello");
