@@ -1,3 +1,11 @@
-let nums = [2,5,8,11,15,17]
-let lastNums = nums.filter((num) => num > 10).map((num) => num*16)
-console.log(lastNums);
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req: any, res: any) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
