@@ -1,0 +1,1 @@
+export type ActionType = "Paylaş" | "Gönder" | "Kaydet" | "Raporla";

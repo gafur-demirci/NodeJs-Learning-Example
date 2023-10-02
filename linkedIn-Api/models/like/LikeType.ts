@@ -1,0 +1,1 @@
+export type LikeType = "Beğen" | "Kutla" | "Destek Ver" | "Harika" | "Bilgi Verici" | "Eğlenceli";
