@@ -1,9 +1,9 @@
-import { getPostById } from "../../controllers/Post/PostController";
-import { ILikeManager } from "../like/ILikeManager";
-import { IUserManager } from "../user/IUserManager";
-import { IPostManager } from "./IPostManager";
+import { getPostById } from '../../controllers/Post/PostController';
+import { ILikeManager } from '../like/ILikeManager';
+import { IUserManager } from '../user/IUserManager';
+import { IPostManager } from './IPostManager';
 
-export class Post implements IPostManager{
+export class Post implements IPostManager {
     id: String;
     text: String;
     url: String;
@@ -16,11 +16,9 @@ export class Post implements IPostManager{
      */
     constructor(id: String) {
         this.id = id;
-        
     }
 
-    getPostById(id: String): Post{
+    getPostById(id: String): Post {
         return getPostById(id);
     }
-    
 }
